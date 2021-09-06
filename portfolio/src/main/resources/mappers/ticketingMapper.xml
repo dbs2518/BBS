@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ <mapper namespace="ticketingMapper">
+	
+	<select id="selectList" resultType="TicketingDTO">
+	    SELECT *, @rownum := @rownum+1 AS rownum
+        FROM TICKETING, (SELECT @rownum :=0) AS R
+        WHERE userID = #{sessionId};
+	</select>
+	
+	<insert id="insert">
+		INSERT INTO TICKETING (userID, movieName, movieTime, movieSeat, movieDay)
+		VALUES (#{userID}, #{movieName}, #{movieTime}, #{movieSeat}, #{movieDay})
+	</insert>
+	
+	<delete id="delete">
+		DELETE FROM TICKETING WHERE ticketingSn = #{ticketingSn};
+	</delete>
+</mapper>

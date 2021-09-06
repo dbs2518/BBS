@@ -1,0 +1,184 @@
+@charset "utf-8";
+
+/* 레이아웃 */
+html {position: relative; min-height: 100%;}
+#mNav {display: none; position: absolute; top: 10px; right: 14px;}
+#header {width: 100%; border-bottom: 1px solid #c6c6c6; background-color: #fff;}
+#banner {position: relative;}
+#ticketing {height: 500px;}
+#footer {position: absolute; width: 100%; bottom: 0; background: #211f1f;}
+
+/* 가운데 영역 */
+.container {position: relative; width: 1280px; margin: 0 auto; background: rgba(0,0,0,0);}
+
+/* 로우 영역 */
+.row {padding: 0 28px;}
+.row1 {padding: 0 28px; font-style: oblique;}
+
+/* 모바일 메뉴 */
+.ham {display: block; width: 25px; height: 10px; padding: 15px 10px 10px 10px;}
+.ham span {position: relative; display: block; width: 25px; height: 4px; background: #39106a;}
+.ham span:before {
+    content: '';
+    width: 25px; height: 4px; background: #39106a;
+    position: absolute; left: 0; bottom: -7px;
+}
+.ham span:after {
+    content: '';
+    width: 25px; height: 4px; background: #39106a;
+    position: absolute; left: 0; top: -7px;
+}
+
+/* 헤더 영역 */
+.header h1 {float: left;}
+.header h1 em {padding: 15px 8px 5px 0; display: inline-block;}
+.header h1 em img {width: 155px;}
+.header h1 strong {display: block; position: absolute; left: 194px; top: 23px;}
+.header h1 strong img {width: 126px;}
+.header .nav {float: right;}
+.header .nav ul {border-left: 1px solid #c6c6c6;}
+.header .nav li {float: left; width: 103px; text-align: center; border-right: 1px solid #c6c6c6;}
+.header .nav li a {display: block; padding: 19px 10px; font-size: 17px; font-weight: 700; color: #444;}
+
+/* 배너 */
+.banner_menu {overflow: hidden; position: absolute; left: 0; top: 20px; width: 100%; height: 100px; z-index: 10;}
+.banner_menu a {color: #000; font-size: 16px;}
+.banner_menu a:hover {color: #6e40c4; font-size: 16px; transition: all 0.3s;}
+.banner_menu .bm_right {float: right;}
+.banner_menu .bm_right ul {float: left; overflow: hidden;}
+.banner_menu .bm_right ul:first-child {padding-top: 7px;}
+.banner_menu .bm_right li {position: relative; display: inline; text-align: center; margin-right: 20px;}
+.banner_menu .bm_right li.line {margin-right: 30px;}
+.banner_menu .bm_right li.white {margin-right: 10px; }
+.banner_menu .bm_right li.white a {width: 80px; background-color: #fff; color: #3a0e6a; padding: 7px 30px 9px 30px; border: 1px solid #fff; display: inline-block;}
+.banner_menu .bm_right li.purple {margin-right: 0;}
+.banner_menu .bm_right li.purple a {width: 80px; background-color: #3a0e6a; color: #fff; padding: 7px 30px 9px 30px; border: 1px solid #6e40c4; display: inline-block;}
+
+.banner_menu li.line::after {
+    content: '';
+    width: 1px; height: 14px; background: #000; 
+    position: absolute; right: -18px; top: 2px;
+}
+
+/* 예매 */
+.ticketing_menu .ticketing_main h3 {margin-top: 50px; font-size: 30px;}
+.ticketing_menu .ticketing_main hr {margin-top: 15px; margin-bottom: 60px;}
+.ticketing_menu .ticketing_main h2 {text-align: center; font-size: 27px; font-weight: 600; margin-bottom: 6%;}
+
+.ticketing_menu .ticketing_main .formContainer{}
+.ticketing_menu .ticketing_main img {width: 25px; padding: 0 5px;}
+.ticketing_menu .ticketing_main ul {}
+.ticketing_menu .ticketing_main ul .nemo {border: 1px solid #ccc; padding: 3px;}
+.ticketing_menu .ticketing_main .frist_line ul {clear: both;}
+.ticketing_menu .ticketing_main .form_left {float: left;  width: 60%;}
+.ticketing_menu .ticketing_main .frist_line ul:first-child {margin-top: 50px;}
+.ticketing_menu .ticketing_main .frist_line ul:last-child {margin-bottom: 100px;}
+.ticketing_menu .ticketing_main .frist_line ul li {float: left; margin: 10px;}
+
+input[type='radio'][name='movieSeat'] {display: none;}
+input[type='radio'][name='movieSeat']  + #seatLabel {display:block; width: 25px; height: 25px; background-color: black;}
+input[type='radio'][name='movieSeat']:checked + #seatLabel {display:block; width: 25px; height: 25px; background-color: #6e40c4;}
+#seatLabel {color: #fff; padding: 5px;}
+
+.ticketing_menu .ticketing_main .form_right {}
+.ticketing_menu .ticketing_main .payBtn {text-align: center;}
+input[type='submit'][name='submit'] {margin-top: 35px; cursor: pointer; padding: 10px 25px; border: 0; background-color: #3a0e6a; color: #fff;}
+
+
+/* 푸터 */
+.footer_sns {position: absolute; right: 17px; top: 33px; z-index: 1;}
+.footer_sns li {display: inline-block; margin: 0 2px;}
+.footer_sns li a {display: block; width: 36px; height: 36px;}
+.footer_sns li.s1 {background-position: 0 -375px;}
+.footer_sns li.s2 {background-position: -36px -375px;}
+.footer_sns li.s3 {background-position: -72px -375px;}
+.footer_sns li.s4 {background-position: -108px -375px;}
+.footer_sns li.s5 {background-position: -144px -375px;}
+.footer_sns li.s1:hover {background-position: 0 -411px;}
+.footer_sns li.s2:hover {background-position: -36px -411px;}
+.footer_sns li.s3:hover {background-position: -72px -411px;}
+.footer_sns li.s4:hover {background-position: -108px -411px;}
+.footer_sns li.s5:hover {background-position: -144px -411px;}
+.footer_sns .tel {text-align: right; padding-top: 5px;}
+.footer_sns .tel a {color: #8f8f8f; font-size: 21px;}
+.footer_sns .tel a em {color: #fff;}
+
+.footer_info {padding: 50px 0; width: 80%;}
+.footer_info h2 img {width: 150px;}
+.footer_info ul {padding: 15px 0;}
+.footer_info li {position: relative; display: inline; padding-right: 16px; white-space: nowrap;}
+.footer_info li:after {content: ''; position: absolute; right: 5px; top: 5px; width: 1px; height: 11px; background: #8f8f8f;}
+.footer_info li:last-child:after {width: 0; height: 0;}
+.footer_info li a {color: #8f8f8f;}
+.footer_info address p {color: #8f8f8f; padding-bottom: 15px;}
+
+/* 조회하기 모달 */
+#lookup_modal {display: none; width: 200px; height: 400px; padding: 20px 60px; background-color: #fefefe; border: 1px solid #888; border-radius: 3px;}
+#lookup_modal .modal_close_btn {position: absolute; top: 10px; right: 10px;}
+#lookup_modal .loginBtn {width: 350px; height: 40px;  margin-bottom: 10px; text-align: center; font-size: 14px; font-weight: 600; line-height: 40px; color: #fff; box-shadow: 3px 3px 8px rgb(0 0 0 / 50%); background-color: #38116a;}
+#lookup_modal .loginBtn a {color: #fff;}
+#lookup_modal h2 {color: #000; font-size: 30px; text-align: center; padding: 18px;} 
+#lookup_modal .containerImg {text-align: left; font-size: 18px;}
+#lookup_modal p {padding: 13px 0;}
+#lookup_modal .modal_close_btn .contanier {width: 25px; cursor: pointer;}
+
+
+/* 반응형 */
+@media (max-width: 1290px){
+    .container {width: 100%;}
+    .header .nav li {width: 93px;}
+    .header .nav li a {font-size: 15px; padding: 17px 10px;}
+    .header h1 em {padding: 11px 8px 5px 0;}
+    .header h1 strong {top: 19px;}
+    
+}
+/* 1024px */
+@media (max-width: 1024px){
+    #mNav {display: block;}
+    .nav {display: none;}
+    .row {padding: 0 24px;}
+    .header h1 {float: none; text-align: center;}
+    .header h1 strong {left: 24px;}
+    .banner_menu .bm_left {display: none;}
+    .banner_menu .bm_right ul:first-child {display: none;}
+
+}
+/* 960px */
+@media (max-width: 960px){
+    .footer_sns {position: static; text-align: center; background: #352c2c; padding-bottom: 15px;}
+    .footer_sns .tel {display: none;}
+    .footer_info {width: 100%; text-align: center;}
+}
+/* 768px */
+@media (max-width: 768px){
+    body {background: #d0d7e0;}
+
+    .row {padding: 0 16px;}
+    #mNav {right: 6px;}
+    .header h1 strong {display: none;}
+    .header h1 {text-align-last: left;}
+
+}
+/* 600px */
+@media (max-width: 600px){
+    .slider {height: 400px;}
+    .slider .swiper-slide h2 {margin-top: 140px; font-size: 24px; line-height: 30px;}
+    .slider .swiper-slide h2:after {bottom: -5px;}
+    .slider .swiper-slide h2 em {font-size: 20px;}
+    .slider .swiper-slide p {font-size: 14px; padding-top: 25px;}
+
+    .banner_menu {top: 16px;}
+    .banner_menu .bm_right li.white a {font-size: 14px; padding: 3px 5px 5px 5px; color: #fff; background: rgba(0,0,0,0.6); border-color: #fff;}
+    .banner_menu .bm_right li.purple a {font-size: 14px; padding: 3px 5px 5px 5px; color: #fff; background: rgba(0,0,0,0.6); border-color: #fff;}
+    .swiper-pagination-bullet {width: 13px !important; height: 13px !important;}
+
+   
+}
+/* 480px */
+@media (max-width: 480px){
+
+}
+/* 320px */
+@media (max-width: 320px){
+    
+}
