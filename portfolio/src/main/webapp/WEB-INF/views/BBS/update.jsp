@@ -51,7 +51,7 @@
 	<nav class="navbar navbar-default">
 		<div class="navbar-header">
 			<button type="button" class="navbar-toggle collapsed"
-				data-toggle="collaspse" data-target="#bs-example-navbar-collapse-1"
+				data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
 				aria-expanded="false">
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
@@ -59,10 +59,11 @@
 			</button>
 			<a class="navbar-brand" href="${path}/main">JSP 게시판 웹 사이트</a>
 		</div>
-		<div class="collaspse navbar-collapse" id="bs-example-navbar-collaspse-1">
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav">
 				<li><a href="${path}/main">메인</a></li>
 				<li class="active"><a href="${path}/bbs">게시판</a></li>
+				<li><a href="${path}/megabox">메가박스 리뉴얼</a></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 				<li class="dropdown">

@@ -33,12 +33,12 @@ public class MegaboxController {
 	
 	@RequestMapping(value = "/main", method = RequestMethod.GET)
 	public String main() {		
-		logger.info("Welcome BBS");
+		logger.info("Welcome megabox");
 		return "megabox/main";
 	}
 	
 	@RequestMapping(value = "/join", method = RequestMethod.GET)
-	public String join() {		
+	public String join() {
 		logger.info("join");
 		return "megabox/join";
 	}

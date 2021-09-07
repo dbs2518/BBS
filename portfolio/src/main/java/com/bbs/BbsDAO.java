@@ -13,7 +13,7 @@ public class BbsDAO {
 	
 	public BbsDAO() {
 		try {
-			String dbURL = "jdbc:mariadb://dbs2518.cafe24.com/dbs2518";
+			String dbURL = "jdbc:mariadb://localhost:3306/dbs2518";
 			String dbID = "dbs2518";
 			String dbPassword = "rlaxkrrn1791!";
 			Class.forName("org.mariadb.jdbc.Driver");

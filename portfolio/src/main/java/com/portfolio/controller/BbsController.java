@@ -28,6 +28,12 @@ public class BbsController {
 		return "BBS/main";
 	}
 	
+	@RequestMapping(value = "/megabox", method = RequestMethod.GET)
+	public String megabox() {		
+		logger.info("Welcome megabox");
+		return "megabox/main";
+	}
+	
 	@RequestMapping(value = "/bbs", method = RequestMethod.GET)
 	public String bbs() {		
 		return "BBS/bbs";
@@ -46,7 +52,7 @@ public class BbsController {
     	out.println("<script>alert('이미 로그인이 되어있습니다.');history.back();</script>");
 	  }
 
-	@RequestMapping(value = "/loginAction", method = RequestMethod.POST)
+	@RequestMapping(value = "/login", method = RequestMethod.POST)
 	public String loginAction(String userID, String userPassword, HttpSession session, HttpServletRequest request, HttpServletResponse response) throws Exception {	
 		String userid = null;
 
