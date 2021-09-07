@@ -37,33 +37,38 @@ public class MegaboxController {
 		return "megabox/main";
 	}
 	
+	//회원가입
 	@RequestMapping(value = "/join", method = RequestMethod.GET)
 	public String join() {
 		logger.info("join");
 		return "megabox/join";
 	}
 	
+	//회원가입 기능
 	@RequestMapping(value = "/join", method = RequestMethod.POST)
 	public String joinAction(UserDTO udto, HttpSession session, HttpServletRequest request, HttpServletResponse response) throws Exception {	
-		String userid = null;
+		String sessionId = null;
 		
 	    response.setContentType("text/html;charset=UTF-8");
         response.setCharacterEncoding("UTF-8");
     	PrintWriter out = response.getWriter();
     
+    	//로그인 체크
 	    if (session.getAttribute("userID") != null){
-	    	userid = (String) session.getAttribute("userID");
+	    	sessionId = (String) session.getAttribute("userID");
 	    }
-	    if (userid != null){
+	    if (sessionId != null){
 			out.println("<script>alert('이미 로그인이 되어있습니다.');history.back();</script>");
 			out.flush();
 			return "/megabox/main";
 	    }
 	    
+	    //회원가입 인풋값 체크
 	    if (udto.getUserID() == null || udto.getUserPassword() == null || udto.getUserName() == null || udto.getUserEmail() == null){
 			out.println("<script>alert('입력이 안 된 사항이 있습니다.');history.back();</script>");
 			out.flush();
 		} else {
+			//회원가입
 		    int result = service.joinAction(udto);
 		    if (result == -1) {
 				out.println("<script>alert('이미 존재하는 아이디입니다.');history.back();</script>");
@@ -76,29 +81,33 @@ public class MegaboxController {
 		return "/megabox/main";
 	}
 	
+	//로그인
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
 	public String login() {		
 		logger.info("login");
 		return "megabox/login";
 	}
 	
+	//로그인 기능
 	@RequestMapping(value = "/login", method = RequestMethod.POST)
 	public String loginAction(String userID, String userPassword, HttpSession session, HttpServletRequest request, HttpServletResponse response) throws Exception {	
-		String userid = null;
+		String sessionId = null;
 
 	    response.setContentType("text/html;charset=UTF-8");
         response.setCharacterEncoding("UTF-8");
     	PrintWriter out = response.getWriter();
     
+    	//로그인 체크
 	    if (session.getAttribute("userID") != null){
-	    	userid = (String) session.getAttribute("userID");
+	    	sessionId = (String) session.getAttribute("userID");
 	    }
-	    if (userid != null){
+	    if (sessionId != null){
 			out.println("<script>alert('이미 로그인이 되어있습니다.');history.back();</script>");
 			out.flush();
 			return "/megabox/main";
 	    }
 	    
+	    //로그인
 	    int result = service.loginAction(userID, userPassword, session);
 	    if (result == 1) {
 			return "redirect:/megabox/main";
@@ -106,17 +115,17 @@ public class MegaboxController {
 	    else if (result == 0) {
 			out.println("<script>alert('비밀번호가 틀립니다.');history.back();</script>");
 			out.flush();
-	        return userid;
+	        return sessionId;
 	    }
 	    else if (result == -1) {
 			out.println("<script>alert('존재하지 않는 아이디입니다.');history.back();</script>");
 			out.flush();
-	    	return userid;
+	    	return sessionId;
 	    }
 	    else if (result == -2) {
 			out.println("<script>alert('데이터베이스 오류가 발생했습니다.');history.back();</script>");
 			out.flush();
-	    	return userid;
+	    	return sessionId;
 	    }	
 		return "/megabox/main";	
 	}
@@ -127,20 +136,21 @@ public class MegaboxController {
 		return "redirect:/megabox/main";
 	}
 	
+	//예매하기
 	@RequestMapping(value = "/ticketing", method = RequestMethod.GET)
 	public String ticketing(HttpSession session, HttpServletRequest request, HttpServletResponse response) throws Exception {		
 		logger.info("ticketing");
 		
-		String userid = null;
-		
+		String sessionId = null;
 		response.setContentType("text/html;charset=UTF-8");
         response.setCharacterEncoding("UTF-8");
     	PrintWriter out = response.getWriter();
-    
+    	
+    	//페이지 진입시 로그인 체크
 	    if (session.getAttribute("userID") != null){
-	    	userid = (String) session.getAttribute("userID");
+	    	sessionId = (String) session.getAttribute("userID");
 	    }
-	    if (userid == null){
+	    if (sessionId == null){
 			out.println("<script>alert('로그인이 되어있지 않습니다.');</script>");
 			out.flush();
 			return "/megabox/login";
@@ -148,6 +158,8 @@ public class MegaboxController {
 		return "/megabox/ticketing";
 	}
 	
+
+	//예매하기 기능
 	@RequestMapping(value = "/ticketing", method = RequestMethod.POST)
 	public String ticketingAction(TicketingDTO tdto, HttpSession session, HttpServletRequest request, HttpServletResponse response) throws Exception {		
 		logger.info("ticketing");
@@ -157,7 +169,8 @@ public class MegaboxController {
 		response.setContentType("text/html;charset=UTF-8");
         response.setCharacterEncoding("UTF-8");
     	PrintWriter out = response.getWriter();
-
+        
+    	//로그인 체크
     	sessionId = (String) session.getAttribute("userID");
 	    if (sessionId == null){
 			out.println("<script>alert('로그인이 되어있지 않습니다.');</script>");
@@ -167,10 +180,12 @@ public class MegaboxController {
 	    
 	    tdto.setUserID(sessionId);
 	    
+	    //예매 공란 체크
 	    if (tdto.getUserID() == null || tdto.getMovieName() == "" || tdto.getMovieSeat() == "" || tdto.getMovieTime() == "" || tdto.getMovieDay() == ""){
 			out.println("<script>alert('선택 되지 않은 사항이 있습니다.');history.back();</script>");
 			out.flush();
 		} else {
+			//예매하기
 		    int result = ticketService.ticketingAction(tdto);
 		    if (result == -1) {
 				out.println("<script>alert('중복된 좌석입니다.');history.back();</script>");

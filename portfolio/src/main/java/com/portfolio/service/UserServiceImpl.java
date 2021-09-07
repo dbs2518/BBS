@@ -29,32 +29,34 @@ public class UserServiceImpl implements UserService  {
     	logger.debug(userID);
     	
     	int result = -2;
+    	//db조회
     	UserDTO udto = udao.selectOne(userID);
     	
-    	if(udto == null) { //아이디 없음
-    		result = -1;
+    	if(udto == null) {
+    		result = -1;  //아이디 없음
     	}else {
     		if(userPassword.equals(udto.getUserPassword())) {
     	    	session.setAttribute("userID", udto.getUserID());
-    			result = 1;
+    			result = 1; //로그인 성공
     		}
     		else {
-    			result = 0;
+    			result = 0; //비밀번호 불일치
     		}
     	}
-    	return result;
+    	return result; //데이터베이스 오류
     }
     
     //회원가입 
 	@Override
     public int joinAction(UserDTO udto) {
 		try {
+			//db에 저장
 			int insert = udao.insert(udto);
 			logger.info(String.valueOf(insert));
-			return 1;
+			return 1; //회원가입 성공
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
-		return -1;
+		return -1; //회원가입 실패
 	}
 }

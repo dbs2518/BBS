@@ -42,12 +42,13 @@ public class TicketingServiceImpl implements TicketingService  {
 	@Override
     public int ticketingAction(TicketingDTO tdto) {
 		try {
+			//db에 저장
 			int insert = tdao.insert(tdto);
 			logger.info(String.valueOf(insert));
-			return 1;
+			return 1; //예매 성공
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
-		return -1;
+		return -1;  //예매 실패
 	}
 }
