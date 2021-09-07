@@ -143,7 +143,7 @@
                               <h3><span class="icon a12 ir_pm">12세이상관람가</span> <strong>샹치</strong></h3>
                               <div class="infor_btn">
                                  <a href="#">상세보기</a>
-                                 <a href="Ticketing.html">예매하기</a>
+                                 <a href="${path}/megabox/ticketing">예매하기</a>
                               </div>
                            </div>
                         </div>
@@ -162,7 +162,7 @@
                               <h3><span class="icon a12 ir_pm">12세이상관람가</span><strong>코다</strong></h3>
                               <div class="infor_btn">
                                  <a href="#">상세보기</a>
-                                 <a href="Ticketing.html">예매하기</a>
+                                 <a href="${path}/megabox/ticketing">예매하기</a>
                               </div>
                            </div>
                         </div>
@@ -181,7 +181,7 @@
                               <h3><span class="icon a12 ir_pm">12세이상관람가</span> <strong>여름날우리</strong></h3>
                               <div class="infor_btn">
                                  <a href="#">상세보기</a>
-                                 <a href="Ticketing.html">예매하기</a>
+                                 <a href="${path}/megabox/ticketing">예매하기</a>
                               </div>
                            </div>
                         </div>
@@ -200,7 +200,7 @@
                               <h3><span class="icon a15 ir_pm">15세이상관람가 </span> <strong>코드카림</strong></h3>
                               <div class="infor_btn">
                                  <a href="#">상세보기</a>
-                                 <a href="Ticketing.html">예매하기</a>
+                                 <a href="${path}/megabox/ticketing">예매하기</a>
                               </div>
                            </div>
                         </div>
@@ -219,7 +219,7 @@
                               <h3><span class="icon a12 ir_pm">12세이상관람가</span> <strong>상견니</strong></h3>
                               <div class="infor_btn">
                                  <a href="#">상세보기</a>
-                                 <a href="Ticketing.html">예매하기</a>
+                                 <a href="${path}/megabox/ticketing">예매하기</a>
                               </div>
                            </div>
                         </div>
@@ -243,7 +243,7 @@
                               <h3><span class="icon a12 ir_pm">12세이상관람가</span> <strong>드림걸즈</strong></h3>
                               <div class="infor_btn">
                                  <a href="#">상세보기</a>
-                                 <a href="Ticketing.html">예매하기</a>
+                                 <a href="${path}/megabox/ticketing">예매하기</a>
                               </div>
                            </div>
                         </div>
@@ -262,7 +262,7 @@
                               <h3><span class="icon a12 ir_pm">12세이상관람가</span><strong>샹치</strong></h3>
                               <div class="infor_btn">
                                  <a href="#">상세보기</a>
-                                 <a href="Ticketing.html">예매하기</a>
+                                 <a href="${path}/megabox/ticketing">예매하기</a>
                               </div>
                            </div>
                         </div>
@@ -281,7 +281,7 @@
                               <h3><span class="icon a15 ir_pm">15세이상관람가</span> <strong>최선의삶</strong></h3>
                               <div class="infor_btn">
                                  <a href="#">상세보기</a>
-                                 <a href="Ticketing.html">예매하기</a>
+                                 <a href="${path}/megabox/ticketing">예매하기</a>
                               </div>
                            </div>
                         </div>
@@ -300,7 +300,7 @@
                               <h3><span class="icon a15 ir_pm">15세이상관람가 </span> <strong>모가디슈</strong></h3>
                               <div class="infor_btn">
                                  <a href="#">상세보기</a>
-                                 <a href="Ticketing.html">예매하기</a>
+                                 <a href="${path}/megabox/ticketing">예매하기</a>
                               </div>
                            </div>
                         </div>
@@ -319,7 +319,7 @@
                               <h3><span class="icon a12 ir_pm">12세이상관람가</span> <strong>언어의정원</strong></h3>
                               <div class="infor_btn">
                                  <a href="#">상세보기</a>
-                                 <a href="Ticketing.html">예매하기</a>
+                                 <a href="${path}/megabox/ticketing">예매하기</a>
                               </div>
                            </div>
                         </div>
@@ -343,7 +343,7 @@
                               <h3><span class="icon a12 ir_pm">12세이상관람가</span> <strong>샹치</strong></h3>
                               <div class="infor_btn">
                                  <a href="#">상세보기</a>
-                                 <a href="Ticketing.html">예매하기</a>
+                                 <a href="${path}/megabox/ticketing">예매하기</a>
                               </div>
                            </div>
                         </div>
@@ -362,7 +362,7 @@
                               <h3><span class="icon a12 ir_pm">12세이상관람가</span><strong>코다</strong></h3>
                               <div class="infor_btn">
                                  <a href="#">상세보기</a>
-                                 <a href="Ticketing.html">예매하기</a>
+                                 <a href="${path}/megabox/ticketing">예매하기</a>
                               </div>
                            </div>
                         </div>
@@ -381,7 +381,7 @@
                               <h3><span class="icon a12 ir_pm">12세이상관람가</span> <strong>여름날우리</strong></h3>
                               <div class="infor_btn">
                                  <a href="#">상세보기</a>
-                                 <a href="Ticketing.html">예매하기</a>
+                                 <a href="${path}/megabox/ticketing">예매하기</a>
                               </div>
                            </div>
                         </div>
@@ -400,7 +400,7 @@
                               <h3><span class="icon a15 ir_pm">15세이상관람가 </span> <strong>코드카림</strong></h3>
                               <div class="infor_btn">
                                  <a href="#">상세보기</a>
-                                 <a href="Ticketing.html">예매하기</a>
+                                 <a href="${path}/megabox/ticketing">예매하기</a>
                               </div>
                            </div>
                         </div>
@@ -419,7 +419,7 @@
                               <h3><span class="icon a12 ir_pm">12세이상관람가</span> <strong>상견니</strong></h3>
                               <div class="infor_btn">
                                  <a href="#">상세보기</a>
-                                 <a href="Ticketing.html">예매하기</a>
+                                 <a href="${path}/megabox/ticketing">예매하기</a>
                               </div>
                            </div>
                         </div>
@@ -443,7 +443,7 @@
                               <h3><span class="icon a12 ir_pm">12세이상관람가</span> <strong>드림걸즈</strong></h3>
                               <div class="infor_btn">
                                  <a href="#">상세보기</a>
-                                 <a href="Ticketing.html">예매하기</a>
+                                 <a href="${path}/megabox/ticketing">예매하기</a>
                               </div>
                            </div>
                         </div>
@@ -462,7 +462,7 @@
                               <h3><span class="icon a12 ir_pm">12세이상관람가</span><strong>샹치</strong></h3>
                               <div class="infor_btn">
                                  <a href="#">상세보기</a>
-                                 <a href="Ticketing.html">예매하기</a>
+                                 <a href="${path}/megabox/ticketing">예매하기</a>
                               </div>
                            </div>
                         </div>
@@ -481,7 +481,7 @@
                               <h3><span class="icon a15 ir_pm">15세이상관람가</span> <strong>최선의삶</strong></h3>
                               <div class="infor_btn">
                                  <a href="#">상세보기</a>
-                                 <a href="Ticketing.html">예매하기</a>
+                                 <a href="${path}/megabox/ticketing">예매하기</a>
                               </div>
                            </div>
                         </div>
@@ -519,7 +519,7 @@
                               <h3><span class="icon a12 ir_pm">12세이상관람가</span> <strong>언어의정원</strong></h3>
                               <div class="infor_btn">
                                  <a href="#">상세보기</a>
-                                 <a href="Ticketing.html">예매하기</a>
+                                 <a href="${path}/megabox/ticketing">예매하기</a>
                               </div>
                            </div>
                         </div>

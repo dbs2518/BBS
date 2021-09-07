@@ -29,18 +29,5 @@
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="${path}/resources/megabox/icons/favicon_144.png" />
     <link rel="apple-touch-icon-precomposed" sizes="192x192" href="${path}/resources/megabox/icons/favicon_192.png" />
 
-    <!-- 페이스북 메타 태그 -->
-    <meta property="og:title" content="메가박스 사이트 만들기" />
-    <meta property="og:url" content="https://github.com/webstoryboy/megabox2019" />
-    <meta property="og:image" content="https://webstoryboy.github.io/megabox2019/mega.jpg" />
-    <meta property="og:description" content="메가박스 사이트 리뉴얼 페이지.">
-   
-    <!-- 트위터 메타 태그 -->
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="메가박스 사이트 만들기">
-    <meta name="twitter:url" content="https://github.com/webstoryboy/megabox2019/">
-    <meta name="twitter:image" content="https://webstoryboy.github.io/megabox2019/mega.jpg">
-    <meta name="twitter:description" content="메가박스 사이트 리뉴얼 페이지.">
-
     <!-- 웹 폰트 -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">

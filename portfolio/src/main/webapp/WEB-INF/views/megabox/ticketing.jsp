@@ -64,7 +64,7 @@
                            <h2 class="screen">SCREEN</h2>
                            <ul>
                               <li class="nemo">
-                                 A
+                                 <p>A</p>
                               </li>
                               <li>
                                  <input type="radio" id="A1" name="movieSeat" value="A1">
@@ -118,7 +118,7 @@
                            <!--A열-->
                            <ul>
                               <li class="nemo">
-                                 B
+                                 <p>B</p>
                               </li>
                               <li>
                                  <input type="radio" id="B1" name="movieSeat" value="B1">
@@ -172,7 +172,7 @@
                            <!---B열-->
                            <ul>  
                               <li class="nemo">
-                                 C
+                                 <p>C</p>
                               </li>
                               <li>
                                  <input type="radio" id="C1" name="movieSeat" value="C1">
@@ -226,7 +226,7 @@
                            <!--C열-->
                            <ul>  
                               <li class="nemo">
-                                 D
+                                 <p>D</p>
                               </li>
                               <li>
                                  <input type="radio" id="D1" name="movieSeat" value="D1">

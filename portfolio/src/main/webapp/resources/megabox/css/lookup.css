@@ -65,7 +65,7 @@ html {position: relative; min-height: 100%;}
 .lookup_menu .lookup_main h3 {margin-top: 50px; font-size: 30px;}
 .lookup_menu .lookup_main hr {margin-top: 15px; margin-bottom: 60px;}
 
-.lookup_table {width: 1000px; padding: 20px 60px; margin: 0 auto; margin-top: 60px; text-align: center; border-collapse: collapse;}
+.lookup_table {width: 90%; padding: 20px 60px; margin: 0 auto; margin-top: 60px; text-align: center; border-collapse: collapse;}
 .lookup_table thead {height: 60px; background-color: #38116a; color: #fff; font-size: 18px; border: 1px solid #38116a;}
 .lookup_table tbody {font-size: 14px;}
 .lookup_table tbody tr td {height: 50px;}
@@ -107,6 +107,8 @@ html {position: relative; min-height: 100%;}
     .header h1 em {padding: 11px 8px 5px 0;}
     .header h1 strong {top: 19px;}
     
+    .lookup_table {width: 100%;}
+    .lookup_table tbody tr td:nth-child(2) {width: 20%;}
 }
 /* 1024px */
 @media (max-width: 1024px){
@@ -115,9 +117,6 @@ html {position: relative; min-height: 100%;}
     .row {padding: 0 24px;}
     .header h1 {float: none; text-align: center;}
     .header h1 strong {left: 24px;}
-    .banner_menu .bm_left {display: none;}
-    .banner_menu .bm_right ul:first-child {display: none;}
-
 }
 /* 960px */
 @media (max-width: 960px){
@@ -132,26 +131,13 @@ html {position: relative; min-height: 100%;}
     #mNav {right: 6px;}
     .header h1 strong {display: none;}
     .header h1 {text-align-last: left;}
-
 }
 /* 600px */
 @media (max-width: 600px){
-    .slider {height: 400px;}
-    .slider .swiper-slide h2 {margin-top: 140px; font-size: 24px; line-height: 30px;}
-    .slider .swiper-slide h2:after {bottom: -5px;}
-    .slider .swiper-slide h2 em {font-size: 20px;}
-    .slider .swiper-slide p {font-size: 14px; padding-top: 25px;}
-
-    .banner_menu {top: 16px;}
-    .banner_menu .bm_right li.white a {font-size: 14px; padding: 3px 5px 5px 5px; color: #fff; background: rgba(0,0,0,0.6); border-color: #fff;}
-    .banner_menu .bm_right li.purple a {font-size: 14px; padding: 3px 5px 5px 5px; color: #fff; background: rgba(0,0,0,0.6); border-color: #fff;}
-   
 }
 /* 480px */
 @media (max-width: 480px){
-
 }
 /* 320px */
 @media (max-width: 320px){
-    
 }

@@ -1,11 +1,5 @@
 @charset "utf-8";
 
-/* 스킵 메뉴 
-#skip {position: relative;}
-#skip a {position: absolute; left: 0; top: -40px; width: 140px; border: 1px solid #fff; color: #fff; text-align: center; background: #333; line-height: 30px;}
-#skip a:active,
-#skip a:focus {top: 0;}*/
-
 /* 레이아웃 */
 #mNav {display: none; position: absolute; top: 10px; right: 14px;}
 #header {width: 100%; border-bottom: 1px solid #c6c6c6; background-color: #fff;}
@@ -80,11 +74,6 @@
 .slider .ss2 {background: url(../img/swiper02.jpg) no-repeat center center; background-size: cover;}
 .slider .ss3 {background: url(../img/swiper02.jpg) no-repeat center center; background-size: cover;}
 .slider .swiper-slide h2 {position: relative; display: inline-block; font-size: 62px; line-height: 70px; color: #fff; margin-top: 200px;}
-.slider .swiper-slide h2:after {
-    content: '';
-    width: 100%; height: 1px; background: rgba(255, 255, 255, 0.3);
-    position: absolute; left: 0; bottom: -35px; 
-}
 .slider .swiper-slide h2 em {display: block; font-size: 59px; font-weight: 100;}
 .slider .swiper-slide p {font-size: 27px; color: #fff; padding-top: 55px;}
 
@@ -138,7 +127,6 @@
 .opening .open_box > div p {font-size: 23px; color: #fff; font-weight: 300; padding: 6% 0 10%; font-weight: 700;}
 .opening .open_box > div p > em {display: block; font-weight: bold;}
 .opening .open_box > div p > strong {display: block;}
-
 
 /* help */
 .help {overflow: hidden; padding-top: 100px; padding-bottom: 200px;}
@@ -226,7 +214,6 @@
     .header h1 {float: none; text-align: center;}
     .header h1 strong {left: 24px;}
     .banner_menu .bm_left {display: none;}
-    .banner_menu .bm_right ul:first-child {display: none;}
 
     .help article.help_box1 {width: 49%; margin-right: 2%;}
     .help article.help_box2 {width: 49%; margin-right: 0;}

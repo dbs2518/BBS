@@ -40,36 +40,17 @@ html {position: relative; min-height: 100%;}
 .header .nav li {float: left; width: 103px; text-align: center; border-right: 1px solid #c6c6c6;}
 .header .nav li a {display: block; padding: 19px 10px; font-size: 17px; font-weight: 700; color: #444;}
 
-/* 배너 */
-.banner_menu {overflow: hidden; position: absolute; left: 0; top: 20px; width: 100%; height: 100px; z-index: 10;}
-.banner_menu a {color: #000; font-size: 16px;}
-.banner_menu a:hover {color: #6e40c4; font-size: 16px; transition: all 0.3s;}
-.banner_menu .bm_right {float: right;}
-.banner_menu .bm_right ul {float: left; overflow: hidden;}
-.banner_menu .bm_right ul:first-child {padding-top: 7px;}
-.banner_menu .bm_right li {position: relative; display: inline; text-align: center; margin-right: 20px;}
-.banner_menu .bm_right li.line {margin-right: 30px;}
-.banner_menu .bm_right li.white {margin-right: 10px; }
-.banner_menu .bm_right li.white a {width: 80px; background-color: #fff; color: #3a0e6a; padding: 7px 30px 9px 30px; border: 1px solid #fff; display: inline-block;}
-.banner_menu .bm_right li.purple {margin-right: 0;}
-.banner_menu .bm_right li.purple a {width: 80px; background-color: #3a0e6a; color: #fff; padding: 7px 30px 9px 30px; border: 1px solid #6e40c4; display: inline-block;}
-
-.banner_menu li.line::after {
-    content: '';
-    width: 1px; height: 14px; background: #000; 
-    position: absolute; right: -18px; top: 2px;
-}
-
 /* 로그인 */
-.login_main { width: 500px; height: 400px; padding: 20px 60px; margin-top: 60px; margin-left: 25%;}
+.login_main { width: 468px; height: 400px; padding: 20px 0; margin: 0 auto; margin-top: 60px;}
 #login_modal .loginBtn {width: 350px; height: 40px; margin: 0 auto; margin: 20px 0; text-align: center; font-size: 14px; font-weight: 600; line-height: 40px; color: #fff; box-shadow: 3px 3px 8px rgb(0 0 0 / 50%); background-color: #38116a;}
 #login_modal .loginBtn a {color: #fff;}
 #login_modal h2 {margin-bottom: 34px; color: #000; font-size: 30px; text-align: center; padding: 18px;} 
-input[type="text"] { margin-left: 70px; margin-bottom: 15px;}
-input[type="password"] { margin-left: 70px;}
-input[type="checkbox"] { margin-left: 70px; margin-top: 15px;}
 
-#login_modal .loginBtn {margin-left: 70px;}
+#login-form input {display: block; margin: 0 auto;}
+#login-form input[type="text"] {margin-bottom: 15px;}
+#login-form input[type="password"] {margin-bottom: 15px;}
+
+#login_modal .loginBtn {margin: 0 auto;}
 #login_modal #login_botton {margin-left: 70px;}
 #login_modal #login_botton a {float: left; margin: 5px 0; margin-right: 40px;}
 
@@ -108,7 +89,6 @@ input[type="checkbox"] { margin-left: 70px; margin-top: 15px;}
     .header .nav li a {font-size: 15px; padding: 17px 10px;}
     .header h1 em {padding: 11px 8px 5px 0;}
     .header h1 strong {top: 19px;}
-    
 }
 /* 1024px */
 @media (max-width: 1024px){
@@ -117,13 +97,10 @@ input[type="checkbox"] { margin-left: 70px; margin-top: 15px;}
     .row {padding: 0 24px;}
     .header h1 {float: none; text-align: center;}
     .header h1 strong {left: 24px;}
-    .banner_menu .bm_left {display: none;}
-    .banner_menu .bm_right ul:first-child {display: none;}
-
 }
 /* 960px */
 @media (max-width: 960px){
-    .footer_sns {position: static; text-align: center; background: #352c2c; padding-bottom: 15px;}
+    .footer_sns {position: static; text-align: center; background: #352c2c; padding-bottom: 13px;}
     .footer_sns .tel {display: none;}
     .footer_info {width: 100%; text-align: center;}
 }
@@ -134,26 +111,13 @@ input[type="checkbox"] { margin-left: 70px; margin-top: 15px;}
     #mNav {right: 6px;}
     .header h1 strong {display: none;}
     .header h1 {text-align-last: left;}
-
 }
 /* 600px */
 @media (max-width: 600px){
-    .slider {height: 400px;}
-    .slider .swiper-slide h2 {margin-top: 140px; font-size: 24px; line-height: 30px;}
-    .slider .swiper-slide h2:after {bottom: -5px;}
-    .slider .swiper-slide h2 em {font-size: 20px;}
-    .slider .swiper-slide p {font-size: 14px; padding-top: 25px;}
-
-    .banner_menu {top: 16px;}
-    .banner_menu .bm_right li.white a {font-size: 14px; padding: 3px 5px 5px 5px; color: #fff; background: rgba(0,0,0,0.6); border-color: #fff;}
-    .banner_menu .bm_right li.purple a {font-size: 14px; padding: 3px 5px 5px 5px; color: #fff; background: rgba(0,0,0,0.6); border-color: #fff;}
-   
 }
 /* 480px */
 @media (max-width: 480px){
-
 }
 /* 320px */
 @media (max-width: 320px){
-    
 }

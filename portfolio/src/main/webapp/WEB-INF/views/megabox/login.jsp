@@ -44,7 +44,6 @@
                          <h2>로그인</h2>
                          <input type="text" id="userid" name="userID" placeholder=" 아이디" style="width:350px; height:30px;" required>
                          <input type="password" id="passwd" name="userPassword" placeholder=" 비밀번호" style="width:350px; height:30px;" required>
-                         <label class="formLable"><input type="checkbox" id="login_state"> 아이디 저장</label>
                          <input type="submit" name="submit" class="loginBtn" value="로그인">
                          <div id="login_botton">
                             <a href="#">ID/PW 찾기</a>
