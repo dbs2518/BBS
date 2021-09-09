@@ -15,6 +15,22 @@
 		VALUES (#{userID}, #{movieName}, #{movieTime}, #{movieSeat}, #{movieDay})
 	</insert>
 	
+	<update id="update">
+		UPDATE TICKETING 
+		SET userID = #{userID},
+		movieName = #{movieName}, 
+		movieTime = #{movieTime}, 
+		movieSeat = #{movieSeat}, 
+		movieDay = #{movieDay}
+		WHERE ticketingSn = #{ticketingSn};
+	</update>
+	
+	<select id="selectOne" resultType="String">
+	    SELECT userID
+	    FROM TICKETING
+        WHERE ticketingSn = #{ticketingSn};
+	</select>
+	
 	<delete id="delete">
 		DELETE FROM TICKETING WHERE ticketingSn = #{ticketingSn};
 	</delete>

@@ -29,4 +29,14 @@ public class TicketingDAOImpl implements TicketingDAO {
 	public int insert(TicketingDTO tdto) throws Exception {
 		return session.insert("ticketingMapper.insert",tdto);
 	}
+	
+	@Override
+	public String selectOne(String ticketingSn) throws Exception {
+		return session.selectOne("ticketingMapper.selectOne",ticketingSn);
+	}
+	
+	@Override
+	public int update(TicketingDTO tdto) throws Exception {
+		return session.update("ticketingMapper.update",tdto);
+	}
 }

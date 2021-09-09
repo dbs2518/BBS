@@ -51,4 +51,24 @@ public class TicketingServiceImpl implements TicketingService  {
 		}
 		return -1;  //예매 실패
 	}
+	
+	//예매변경하기 
+	@Override
+    public int ticketingUpdtAction(TicketingDTO tdto, String ticketingSn) {
+		try {
+			String userID = tdao.selectOne(ticketingSn);
+			String sessionId = tdto.getUserID();
+			//db에 저장
+			if(userID.equals(sessionId)) {
+				int update = tdao.update(tdto);
+				logger.info(String.valueOf(update));
+				return 1; //예매변경 성공
+			} else {
+				return 0;
+			}
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+		return -1;  //예매변경 실패
+	}
 }

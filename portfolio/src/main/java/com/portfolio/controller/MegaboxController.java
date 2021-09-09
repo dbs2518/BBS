@@ -46,7 +46,7 @@ public class MegaboxController {
 	
 	//회원가입 기능
 	@RequestMapping(value = "/join", method = RequestMethod.POST)
-	public String joinAction(UserDTO udto, HttpSession session, HttpServletRequest request, HttpServletResponse response) throws Exception {	
+	public String joinAction(UserDTO udto, HttpSession session, HttpServletResponse response) throws Exception {	
 		String sessionId = null;
 		
 	    response.setContentType("text/html;charset=UTF-8");
@@ -90,7 +90,7 @@ public class MegaboxController {
 	
 	//로그인 기능
 	@RequestMapping(value = "/login", method = RequestMethod.POST)
-	public String loginAction(String userID, String userPassword, HttpSession session, HttpServletRequest request, HttpServletResponse response) throws Exception {	
+	public String loginAction(String userID, String userPassword, HttpSession session, HttpServletResponse response) throws Exception {	
 		String sessionId = null;
 
 	    response.setContentType("text/html;charset=UTF-8");
@@ -138,7 +138,7 @@ public class MegaboxController {
 	
 	//예매하기
 	@RequestMapping(value = "/ticketing", method = RequestMethod.GET)
-	public String ticketing(HttpSession session, HttpServletRequest request, HttpServletResponse response) throws Exception {		
+	public String ticketing(HttpSession session, HttpServletResponse response) throws Exception {		
 		logger.info("ticketing");
 		
 		String sessionId = null;
@@ -161,7 +161,7 @@ public class MegaboxController {
 
 	//예매하기 기능
 	@RequestMapping(value = "/ticketing", method = RequestMethod.POST)
-	public String ticketingAction(TicketingDTO tdto, HttpSession session, HttpServletRequest request, HttpServletResponse response) throws Exception {		
+	public String ticketingAction(TicketingDTO tdto, String ticketingSn, HttpSession session, HttpServletResponse response) throws Exception {		
 		logger.info("ticketing");
 		
         String sessionId = null;
@@ -177,28 +177,40 @@ public class MegaboxController {
 			out.flush();
 			return "/megabox/login";
 	    }
-	    
+
 	    tdto.setUserID(sessionId);
-	    
 	    //예매 공란 체크
 	    if (tdto.getUserID() == null || tdto.getMovieName() == "" || tdto.getMovieSeat() == "" || tdto.getMovieTime() == "" || tdto.getMovieDay() == ""){
 			out.println("<script>alert('선택 되지 않은 사항이 있습니다.');history.back();</script>");
 			out.flush();
 		} else {
 			//예매하기
-		    int result = ticketService.ticketingAction(tdto);
-		    if (result == -1) {
-				out.println("<script>alert('중복된 좌석입니다.');history.back();</script>");
-				out.flush();
-		    } else {
-				return "redirect:/megabox/lookup";
-		    }
+			if (tdto.getTicketingSn() == 0) {
+			    int result = ticketService.ticketingAction(tdto);
+			    if (result == -1) {
+					out.println("<script>alert('중복된 좌석입니다.');history.back();</script>");
+					out.flush();
+			    } else {
+					return "redirect:/megabox/lookup";
+			    }
+			} else {
+				int result = ticketService.ticketingUpdtAction(tdto, ticketingSn);
+			    if (result == -1) {
+					out.println("<script>alert('중복된 좌석입니다.');history.back();</script>");
+					out.flush();
+			    } else if (result == 0){
+					out.println("<script>alert('잘못된 접근입니다.');history.back();</script>");
+					out.flush();
+			    } else {
+					return "redirect:/megabox/lookup";
+			    }
+			}
 		}
 		return "/megabox/main";
 	}
 	
 	@RequestMapping(value = "/lookup", method = RequestMethod.GET)
-	public String lookup(HttpSession session, HttpServletRequest request, HttpServletResponse response, Model model) throws Exception {		
+	public String lookup(HttpSession session, HttpServletResponse response, Model model) throws Exception {		
 		logger.info("lookup");
 		
 		String sessionId = null;
@@ -207,6 +219,7 @@ public class MegaboxController {
         response.setCharacterEncoding("UTF-8");
     	PrintWriter out = response.getWriter();
 
+    	//로그인 체크
     	sessionId = (String) session.getAttribute("userID");
 	    if (sessionId == null){
 			out.println("<script>alert('로그인이 되어있지 않습니다.');</script>");
@@ -220,7 +233,7 @@ public class MegaboxController {
 	}
 	
 	@RequestMapping(value = "/delete", method = RequestMethod.GET)
-	public String delete(int ticketingSn, HttpSession session, HttpServletRequest request, HttpServletResponse response) throws Exception {		
+	public String delete(int ticketingSn, HttpSession session, HttpServletResponse response) throws Exception {		
 		logger.info("delete");
 		
 		String sessionId = null;
@@ -229,6 +242,7 @@ public class MegaboxController {
         response.setCharacterEncoding("UTF-8");
     	PrintWriter out = response.getWriter();
 
+    	//로그인 체크
     	sessionId = (String) session.getAttribute("userID");
 	    if (sessionId == null){
 			out.println("<script>alert('로그인이 되어있지 않습니다.');</script>");

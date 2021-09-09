@@ -66,7 +66,7 @@
 		               	   	   <th>상영일</th>
 		               	   	   <th>상영시간</th>
 		               	   	   <th>좌석번호</th>
-		               	   	   <th>취소</th>
+		               	   	   <th>변경 / 취소</th>
 		               	   </tr>
 		               </thead>
 		               <tbody>
@@ -77,7 +77,7 @@
 					       	   	   <td>${tlist.movieDay}</td>
 					       	   	   <td>${tlist.movieTime}</td>
 					       	   	   <td>${tlist.movieSeat}</td>
-		               	   	       <td><a onclick="return confirm('정말로 삭제하시겠습니까?')" class="cancelBtn" href="${path}/megabox/delete?ticketingSn=${tlist.ticketingSn}">취소</a></td>
+		               	   	       <td><a class="cancelBtn" href="${path}/megabox/ticketing?movieSeat=${tlist.movieSeat}&&ticketingSn=${tlist.ticketingSn}">변경</a> <a onclick="return confirm('정말로 삭제하시겠습니까?')" class="cancelBtn" href="${path}/megabox/delete?ticketingSn=${tlist.ticketingSn}">취소</a></td>
 					       	   </tr>
 					       </c:forEach>
 		               	   <tr>
@@ -135,6 +135,5 @@
    
    <!-- 자바스크립트 라이브러리 -->
    <script src="${path}/resources/megabox/js/jquery.min_1.12.4.js"></script>
-   <script src="${path}/resources/megabox/js/lookupJs.js"></script>
 </body>
 </html>

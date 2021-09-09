@@ -11,4 +11,8 @@ public interface TicketingDAO {
 	public int delete(int ticketingSn) throws Exception;
 	
 	public int insert(TicketingDTO tdto) throws Exception;
+	
+	public String selectOne(String ticketingSn) throws Exception;
+	
+	public int update(TicketingDTO tdto) throws Exception;
 }

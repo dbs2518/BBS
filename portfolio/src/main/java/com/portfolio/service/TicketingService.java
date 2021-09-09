@@ -9,6 +9,8 @@ public interface TicketingService {
 	public List<TicketingDTO> selectList(String sessionId) throws Exception;
 	
 	public int ticketingAction(TicketingDTO tdto);
+	
+	public int ticketingUpdtAction(TicketingDTO tdto, String ticketingSn);
 
 	public int delete(int ticketingSn) throws Exception;
 }

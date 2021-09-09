@@ -5,7 +5,7 @@ html {position: relative; min-height: 100%;}
 #mNav {display: none; position: absolute; top: 10px; right: 14px;}
 #header {width: 100%; border-bottom: 1px solid #c6c6c6; background-color: #fff;}
 #banner {position: relative;}
-#ticketing {height: 500px;}
+#ticketing {height: 800px;}
 #footer {position: absolute; width: 100%; bottom: 0; background: #211f1f;}
 
 /* 가운데 영역 */

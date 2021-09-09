@@ -59,7 +59,8 @@
                   <h3>예매하기</h3>
                   <hr>
                   <div class="formContainer">
-                     <form action="${path}/megabox/ticketing" class="frist_line" method="post">
+                     <form action="${path}/megabox/ticketing" id="ticketingform" class="frist_line" method="post">
+                        <input type="hidden" name="ticketingSn" value="0">
                         <div class="form_left">
                            <h2 class="screen">SCREEN</h2>
                            <ul>
