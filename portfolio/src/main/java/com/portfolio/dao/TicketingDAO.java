@@ -14,5 +14,9 @@ public interface TicketingDAO {
 	
 	public String selectOne(String ticketingSn) throws Exception;
 	
+	public List<TicketingDTO> ticketingInit(TicketingDTO tdto) throws Exception;
+	
 	public int update(TicketingDTO tdto) throws Exception;
+	
+	public TicketingDTO snTicketingInit(TicketingDTO tdto) throws Exception;
 }

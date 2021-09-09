@@ -388,6 +388,6 @@
    
    <!-- 자바스크립트 라이브러리 -->
    <script src="${path}/resources/megabox/js/jquery.min_1.12.4.js"></script>
-   <script src="${path}/resources/megabox/js/ticketingJs.js"></script>
+   <%@ include file="./ticketingJs.jsp" %>
 </body>
 </html>

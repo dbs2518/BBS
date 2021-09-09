@@ -69,7 +69,9 @@ html {position: relative; min-height: 100%;}
 .ticketing_menu .ticketing_main .formContainer{}
 .ticketing_menu .ticketing_main img {width: 25px; padding: 0 5px;}
 .ticketing_menu .ticketing_main .frist_line ul {clear: both;}
-.ticketing_menu .ticketing_main .form_left {float: left;  width: 60%;}
+.ticketing_menu .ticketing_main .form_left {position: relative; float: left;  width: 60%;}
+.ticketing_menu .ticketing_main .form_left:after {content: ""; position: absolute; top: 0; display: block; width: 100%; height: 320px; background: black; opacity: 0.2;}
+.ticketing_menu .ticketing_main .formSelected:after {display: none;}
 .ticketing_menu .ticketing_main .form_right {float: right;  width: 40%;}
 .select .s1 select, .select .s2 select, .select .s3 select {width: 100%;}
 
@@ -79,6 +81,7 @@ html {position: relative; min-height: 100%;}
 
 input[type='radio'][name='movieSeat'] {display: none;}
 input[type='radio'][name='movieSeat']  + #seatLabel {display:block; background-color: black; color: #fff;}
+input[type='radio'][name='movieSeat']:disabled + #seatLabel {background-color: #777777;}
 input[type='radio'][name='movieSeat']:checked + #seatLabel {background-color: #6e40c4;}
 
 .ticketing_menu .ticketing_main .payBtn {text-align: center;}

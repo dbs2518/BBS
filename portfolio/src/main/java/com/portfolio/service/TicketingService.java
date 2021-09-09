@@ -10,7 +10,11 @@ public interface TicketingService {
 	
 	public int ticketingAction(TicketingDTO tdto);
 	
+	public List<TicketingDTO> ticketingInit(TicketingDTO tdto) throws Exception;
+	
 	public int ticketingUpdtAction(TicketingDTO tdto, String ticketingSn);
+	
+	public TicketingDTO snTicketingInit(TicketingDTO tdto) throws Exception;
 
 	public int delete(int ticketingSn) throws Exception;
 }

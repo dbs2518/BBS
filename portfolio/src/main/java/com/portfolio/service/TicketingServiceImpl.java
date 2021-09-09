@@ -52,6 +52,12 @@ public class TicketingServiceImpl implements TicketingService  {
 		return -1;  //예매 실패
 	}
 	
+	//예매하기 초기화
+	@Override
+	public List<TicketingDTO> ticketingInit(TicketingDTO tdto) throws Exception {
+		return tdao.ticketingInit(tdto);
+	}
+	
 	//예매변경하기 
 	@Override
     public int ticketingUpdtAction(TicketingDTO tdto, String ticketingSn) {
@@ -70,5 +76,11 @@ public class TicketingServiceImpl implements TicketingService  {
 			e.printStackTrace();
 		}
 		return -1;  //예매변경 실패
+	}
+	
+	//예매변경하기 초기화
+	@Override
+	public TicketingDTO snTicketingInit(TicketingDTO tdto) throws Exception {
+		return tdao.snTicketingInit(tdto);
 	}
 }

@@ -4,7 +4,6 @@ import java.util.List;
 import java.io.PrintWriter;
 
 import javax.annotation.Resource;
-import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
@@ -12,8 +11,11 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.portfolio.dto.TicketingDTO;
 import com.portfolio.dto.UserDTO;
@@ -138,10 +140,13 @@ public class MegaboxController {
 	
 	//예매하기
 	@RequestMapping(value = "/ticketing", method = RequestMethod.GET)
-	public String ticketing(HttpSession session, HttpServletResponse response) throws Exception {		
+	public ModelAndView ticketing(@ModelAttribute TicketingDTO tdto, HttpSession session, HttpServletResponse response) throws Exception {		
 		logger.info("ticketing");
 		
 		String sessionId = null;
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("/megabox/ticketing");
+		
 		response.setContentType("text/html;charset=UTF-8");
         response.setCharacterEncoding("UTF-8");
     	PrintWriter out = response.getWriter();
@@ -153,9 +158,14 @@ public class MegaboxController {
 	    if (sessionId == null){
 			out.println("<script>alert('로그인이 되어있지 않습니다.');</script>");
 			out.flush();
-			return "/megabox/login";
+			mav.setViewName("/megabox/login");
+			return mav;
 	    }
-		return "/megabox/ticketing";
+	    
+	    TicketingDTO ticketDTO = ticketService.snTicketingInit(tdto);
+	    mav.addObject("ticketDTO", ticketDTO);
+	    
+		return mav;
 	}
 	
 
@@ -180,7 +190,7 @@ public class MegaboxController {
 
 	    tdto.setUserID(sessionId);
 	    //예매 공란 체크
-	    if (tdto.getUserID() == null || tdto.getMovieName() == "" || tdto.getMovieSeat() == "" || tdto.getMovieTime() == "" || tdto.getMovieDay() == ""){
+	    if (tdto.getUserID() == null || tdto.getMovieName() == "" || tdto.getMovieSeat() == null || tdto.getMovieTime() == "" || tdto.getMovieDay() == ""){
 			out.println("<script>alert('선택 되지 않은 사항이 있습니다.');history.back();</script>");
 			out.flush();
 		} else {
@@ -207,6 +217,15 @@ public class MegaboxController {
 			}
 		}
 		return "/megabox/main";
+	}
+	
+	//예매하기 초기화
+	@RequestMapping(value = "/ticketingInit", method = RequestMethod.POST)
+    @ResponseBody
+	public List<TicketingDTO> ticketingInit(TicketingDTO tdto) throws Exception {
+		
+		List<TicketingDTO> object = ticketService.ticketingInit(tdto);
+		return object;
 	}
 	
 	@RequestMapping(value = "/lookup", method = RequestMethod.GET)

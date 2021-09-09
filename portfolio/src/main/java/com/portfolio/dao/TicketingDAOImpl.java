@@ -36,7 +36,17 @@ public class TicketingDAOImpl implements TicketingDAO {
 	}
 	
 	@Override
+	public List<TicketingDTO> ticketingInit(TicketingDTO tdto) throws Exception {
+		return session.selectList("ticketingMapper.ticketingInit",tdto);
+	}
+	
+	@Override
 	public int update(TicketingDTO tdto) throws Exception {
 		return session.update("ticketingMapper.update",tdto);
+	}
+	
+	@Override
+	public TicketingDTO snTicketingInit(TicketingDTO tdto) throws Exception {
+		return session.selectOne("ticketingMapper.snTicketingInit",tdto);
 	}
 }
