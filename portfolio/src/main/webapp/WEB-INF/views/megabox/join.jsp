@@ -42,10 +42,10 @@
                   <div id="join_modal">      
                      <form id="join-form" class="form" action="${path}/megabox/join" method="post">      
                         <h2>회원가입</h2>
-                        <input type="text" id="userid" name="userID" placeholder=" 아이디" style="width:350px; height:30px;" required>
-                        <input type="password" id="passwd" name="userPassword" placeholder=" 비밀번호" style="width:350px; height:30px;" required>
-                        <input type="text" id="name" name="userName" placeholder=" 이름" style="width:350px; height:30px;" required>
-                        <input type="email" id="email" name="userEmail" placeholder="abcd@naver.com" style="width:350px; height:30px;" required>
+                        <input type="text" id="userid" name="userID" placeholder=" 아이디" style="height:30px;" required>
+                        <input type="password" id="passwd" name="userPassword" placeholder=" 비밀번호" style="height:30px;" required>
+                        <input type="text" id="name" name="userName" placeholder=" 이름" style="height:30px;" required>
+                        <input type="email" id="email" name="userEmail" placeholder="abcd@naver.com" style="height:30px;" required>
                         <input type="submit" name="submit" class="joinBtn" value="회원가입">
                      </form>
                   </div>
