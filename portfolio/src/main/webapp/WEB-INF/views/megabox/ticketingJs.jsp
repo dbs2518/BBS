@@ -24,9 +24,6 @@ function ticketingInit() {
 	    const movieName = "${ticketDTO.movieName}";
 	    const movieDay = "${ticketDTO.movieDay}";
 	    const movieTime = "${ticketDTO.movieTime}";
-	    console.log(movieName);
-	    console.log(movieDay);
-	    console.log(movieTime);
 	    
 	    $("#movieName").val(movieName).attr("selected", true);
 	    $("#movieDay").val(movieDay).attr("selected", true)
